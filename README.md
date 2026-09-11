@@ -1,38 +1,64 @@
-# car-diagnostics-service
+# Car Diagnostics Service
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Lead-generation website for a mobile car diagnostics service in Alto Minho (Northern Portugal).
 
-## Getting Started
+## Stack
 
-First, run the development server:
+- Next.js App Router + TypeScript + Tailwind CSS
+- `next-intl` (`pt` / `uk` / `en`, shared path slugs)
+- shadcn/ui
+- Vercel-ready (no database)
+
+## Docs
+
+- [Implementation plan](docs/IMPLEMENTATION.md)
+- [Page content (PT/UK/EN)](docs/CONTENT.md)
+
+## Setup
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) (redirects to `/pt`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+npm start
+```
 
-## Learn More
+## Environment
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (production domain) |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 measurement ID (optional) |
+| `NEXT_PUBLIC_WHATSAPP_E164` | WhatsApp number digits (E.164 without `+`) |
+| `NEXT_PUBLIC_PHONE_DISPLAY` | Optional public phone display |
+| `NEXT_PUBLIC_PHONE_TEL` | Optional `tel:` value |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Optional public email |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Business copy and prices live in `src/content/*` and `src/config/*`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy (Vercel)
 
-## Deploy on Vercel
+1. Push the repo and import the project in Vercel.
+2. Set production env vars (`NEXT_PUBLIC_SITE_URL`, WhatsApp, GA4).
+3. Deploy and verify `/pt`, `/uk`, `/en`, `/sitemap.xml`, `/robots.txt`.
+4. Confirm a WhatsApp CTA opens with the correct number.
+5. Add the property in Google Search Console and submit the sitemap.
+6. Create/link Google Business Profile offline (do not invent hours/reviews in JSON-LD).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Launch checklist
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Replace provisional brand name if needed
+- [ ] Set real WhatsApp E.164
+- [ ] Confirm “from” prices in `src/config/pricing.ts`
+- [ ] Native review of PT (European) and UK copy
+- [ ] Lighthouse mobile pass (Perf ≥90, SEO ≥95, A11y ≥90)
