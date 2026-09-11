@@ -1,0 +1,43 @@
+import type { CommonContent } from "../types";
+
+export const common = {
+  nav: {
+    home: "Home",
+    services: "Services",
+    pricing: "Pricing",
+    serviceArea: "Service area",
+    about: "About",
+    contact: "Contact",
+    faq: "FAQ",
+    blog: "Blog",
+  },
+  cta: {
+    book: "Book a diagnostic",
+    whatsapp: "WhatsApp",
+    seePricing: "See pricing",
+    seeServices: "See services",
+    contactUs: "Contact us",
+  },
+  sticky: {
+    book: "Book",
+    whatsapp: "WhatsApp",
+  },
+  footer: {
+    blurb:
+      "Mobile car diagnostics in Alto Minho, Northern Portugal. Based in Vila Praia de Âncora. We communicate in Portuguese, Ukrainian and English.",
+    areaLine:
+      "Vila Praia de Âncora, Caminha, Viana do Castelo and surrounding areas.",
+    rights: "© {year} Diagnóstico Alto Minho",
+  },
+  disclaimers: {
+    capability:
+      "Available functions depend on the vehicle make, model, year and diagnostic equipment.",
+    pricing:
+      "The final price may depend on the vehicle, location and diagnostic complexity.",
+  },
+  localeLabels: {
+    pt: "PT",
+    uk: "UK",
+    en: "EN",
+  },
+} as const satisfies CommonContent;
