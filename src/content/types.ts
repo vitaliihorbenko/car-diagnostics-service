@@ -58,6 +58,7 @@ export type HomeContent = {
     priceLine: string;
     primaryCta: string;
     secondaryCta: string;
+    trustStrip: readonly string[];
   };
   valueProp: {
     h2: string;
@@ -87,6 +88,7 @@ export type HomeContent = {
   pricingTeaser: {
     h2: string;
     rows: readonly { id: PricingItemId; name: string }[];
+    popularLabel: string;
     ctaPricing: string;
     ctaWhatsapp: string;
   };
@@ -133,6 +135,7 @@ export type PricingContent = {
   h1: string;
   intro: string;
   note: string;
+  popularLabel: string;
   tiers: Record<PricingItemId, PricingTierContent>;
   primaryCta: string;
   secondaryCta: string;

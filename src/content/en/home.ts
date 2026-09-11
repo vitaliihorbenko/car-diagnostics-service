@@ -14,6 +14,11 @@ export const home = {
     priceLine: "From €30",
     primaryCta: "Book a diagnostic",
     secondaryCta: "WhatsApp",
+    trustStrip: [
+      "We come to you",
+      "Clear explanation",
+      "Alto Minho coverage",
+    ],
   },
   valueProp: {
     h2: "Understand the problem before spending on parts",
@@ -81,6 +86,7 @@ export const home = {
       { id: "mobile", name: "Mobile diagnostics" },
       { id: "prePurchase", name: "Pre-purchase diagnostics" },
     ],
+    popularLabel: "Most popular",
     ctaPricing: "See pricing",
     ctaWhatsapp: "WhatsApp",
   },

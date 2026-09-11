@@ -45,9 +45,12 @@ export default async function AboutPage({ params }: Props) {
         <h2 className="mt-10 font-heading text-2xl font-semibold">
           {about.valuesHeading}
         </h2>
-        <ul className="mt-4 space-y-2">
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {about.values.map((value) => (
-            <li key={value} className="border-l-2 border-primary/40 pl-3 text-sm">
+            <li
+              key={value}
+              className="rounded-xl border border-border bg-card/60 px-4 py-3 text-sm"
+            >
               {value}
             </li>
           ))}
@@ -56,7 +59,12 @@ export default async function AboutPage({ params }: Props) {
           <Link href="/contact" className={cn(buttonVariants({ size: "lg" }))}>
             {about.primaryCta}
           </Link>
-          <WhatsAppButton label={about.secondaryCta} place="about" size="lg" />
+          <WhatsAppButton
+            label={about.secondaryCta}
+            place="about"
+            size="lg"
+            variant="outline"
+          />
         </div>
       </Section>
     </>

@@ -64,7 +64,7 @@ export function DiagnosticRequestForm({ content }: Props) {
     <form
       onSubmit={onSubmit}
       onFocus={onFocus}
-      className="space-y-4 rounded-xl border border-border bg-card p-5 shadow-sm"
+      className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-none"
       noValidate
     >
       <div>

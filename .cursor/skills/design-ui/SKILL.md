@@ -10,46 +10,46 @@ description: >-
 
 ## Visual direction
 
-Light-first, automotive / technical / trustworthy local service. Credible for a €30–70 mobile diagnostic — not racing chrome, not “AI startup”.
+Modern dark automotive UI for a trustworthy €30–70 mobile diagnostic — deep navy charcoal, mint/teal neon CTAs. Credible and local — not racing chrome, not fake “AI startup” glow spam, not invented social proof.
 
 ### Locked look
 
 | Token | Direction |
 |---|---|
-| Mode | Light-first |
-| Neutrals | Cool steel |
-| Primary | Deep workshop blue |
-| Accent | Amber/signal for WhatsApp/CTA emphasis |
-| Type | **Sora** (headings) + **Manrope** (body) via `next/font`; mono sparingly for prices/codes |
-| Atmosphere | Subtle technical grid or soft radial wash — not flat white; real workshop photo later as full-bleed hero |
+| Mode | Dark navy charcoal (sitewide) |
+| Neutrals | Near-black navy background, elevated dark cards, subtle borders |
+| Primary / CTA | Mint/teal neon (~`#2dd4a8`) with dark text on solid buttons |
+| Secondary | Outline on dark for WhatsApp / secondary actions |
+| Type | **Sora** (headings) + **Manrope** (body) + **Caveat** (script notes) via `next/font`; mono sparingly for prices |
+| Atmosphere | Soft radial / vignette (`.hero-glow`); real photos in `public/images/` (hero car/tablet, wireframe, coastal road, footer road); SVG mark + map in `public/brand/` |
 
 ### Avoid
 
-Purple-on-white / purple–indigo gradients; cream + terracotta serif; broadsheet dense columns; dark-glow; racing aesthetics; fake dashboards; emoji clutter; rounded-full pill clusters; multi-layer shadows.
+Purple-on-white / purple–indigo gradients; cream + terracotta serif; broadsheet dense columns; multi-layer neon glow; racing aesthetics; emoji clutter; fake testimonials or star ratings; claims like “dealer-level” / “all brands” / “expert/best”.
 
 ## shadcn/ui
 
-- Theme CSS variables in `globals.css` to project tokens — do not ship default shadcn look unchanged  
+- Theme CSS variables in `globals.css` to project tokens — do not ship default light shadcn look  
 - Prefer shadcn for interactive/form/a11y UI: button, input, label, textarea, select, accordion, sheet/nav, separator  
-- `card` sparingly — marketing sections are custom composition, not a card dashboard  
-- Custom layout primitives beside shadcn: `Container`, `Section`, `Heading` under `src/components/ui/` or layout  
+- Cards sparingly — use for pricing tiers, problem tiles, area summary when interaction or comparison needs a container  
+- Custom layout primitives: `Container`, `Section`, `Heading`
 
 ## Composition rules
 
 - First viewport = one composition (not a dashboard)  
-- Brand-forward hero: brand, one headline, one short support line, one CTA group, one dominant visual plane  
+- Brand-forward hero: brand/eyebrow, one headline, one short support line, one CTA group, one dominant visual plane  
 - Hero answers: what / where / from-price / how to contact  
-- No hero overlays (badges, chips, floating stickers)  
-- No stat strips or fake social proof in the hero  
+- No fake badges, review chips, or floating stickers  
+- Short honest trust strip (3 items) is OK if copy is real  
 - One job per section: one purpose, one headline, usually one short supporting sentence  
 
 ## Motion
 
-2–3 intentional effects only (e.g. hero fade/slide, CTA hover, sticky bar entrance). No heavy animation libraries beyond shadcn/Radix needs.
+2–3 intentional effects only (e.g. hero fade/slide, CTA hover, sticky bar entrance). No heavy animation libraries beyond shadcn needs.
 
 ## Accessibility & performance
 
-- Focus rings; text/CTA contrast ≥ WCAG AA  
+- Focus rings; text/CTA contrast ≥ WCAG AA (green on dark, dark text on green)  
 - Semantic landmarks; one `h1` per page; labeled inputs; keyboard-usable mobile nav  
 - RSC default; `next/image`; font subsetting; minimal client JS  
 - Targets: Lighthouse Perf ≥90, SEO ≥95, A11y ≥90 (mobile)  

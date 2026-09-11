@@ -10,6 +10,7 @@ export const pricing = {
   intro:
     "Valores orientativos para planear o serviço. Confirme sempre o valor final ao marcar.",
   note: "Em deslocações mais longas ou casos mais complexos, o valor pode ser ajustado antes de confirmar.",
+  popularLabel: "Mais pedido",
   tiers: {
     basic: {
       name: "Diagnóstico básico",

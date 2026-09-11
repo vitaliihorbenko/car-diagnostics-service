@@ -14,6 +14,11 @@ export const home = {
     priceLine: "Desde €30",
     primaryCta: "Marcar diagnóstico",
     secondaryCta: "WhatsApp",
+    trustStrip: [
+      "Vamos até si",
+      "Explicação clara",
+      "Cobertura no Alto Minho",
+    ],
   },
   valueProp: {
     h2: "Perceber o problema antes de gastar em peças",
@@ -81,6 +86,7 @@ export const home = {
       { id: "mobile", name: "Diagnóstico móvel" },
       { id: "prePurchase", name: "Diagnóstico pré-compra" },
     ],
+    popularLabel: "Mais pedido",
     ctaPricing: "Ver preços",
     ctaWhatsapp: "WhatsApp",
   },

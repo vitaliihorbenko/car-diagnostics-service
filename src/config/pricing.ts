@@ -14,15 +14,21 @@ export const pricingItems: PricingItem[] = [
 ];
 
 export function formatFromPrice(amount: number, locale: string): string {
-  const formatted = new Intl.NumberFormat(locale === "uk" ? "uk-UA" : locale === "pt" ? "pt-PT" : "en-GB", {
-    style: "currency",
-    currency: "EUR",
-    maximumFractionDigits: 0,
-  }).format(amount);
+  const currency = "€";
 
-  if (locale === "pt") return `desde ${formatted}`;
-  if (locale === "uk") return `від ${formatted}`;
-  return `from ${formatted}`;
+  if (locale === "pt") return `desde ${currency}${amount}`;
+  if (locale === "uk") return `від ${currency}${amount}`;
+  return `from ${currency}${amount}`;
+}
+
+export function formatPriceAmount(amount: number): string {
+  return `€${amount}`;
+}
+
+export function fromLabel(locale: string): string {
+  if (locale === "pt") return "desde";
+  if (locale === "uk") return "від";
+  return "from";
 }
 
 export function getLowestPrice(): number {

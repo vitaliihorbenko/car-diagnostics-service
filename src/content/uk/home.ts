@@ -15,6 +15,11 @@ export const home = {
     priceLine: "Від €30",
     primaryCta: "Записатися на діагностику",
     secondaryCta: "WhatsApp",
+    trustStrip: [
+      "Приїжджаємо до вас",
+      "Зрозуміле пояснення",
+      "Покриття Алту Мінью",
+    ],
   },
   valueProp: {
     h2: "Спочатку зрозуміти проблему — потім витрачати на запчастини",
@@ -82,6 +87,7 @@ export const home = {
       { id: "mobile", name: "Виїзна діагностика" },
       { id: "prePurchase", name: "Діагностика перед купівлею" },
     ],
+    popularLabel: "Найчастіше обирають",
     ctaPricing: "Переглянути ціни",
     ctaWhatsapp: "WhatsApp",
   },

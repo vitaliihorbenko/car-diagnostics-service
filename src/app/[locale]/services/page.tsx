@@ -47,14 +47,17 @@ export default async function ServicesPage({ params }: Props) {
       <Section>
         <Heading as="h1">{services.h1}</Heading>
         <p className="mt-4 max-w-3xl text-muted-foreground">{services.intro}</p>
-        <p className="mt-4 rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm">
+        <p className="mt-4 rounded-xl border border-primary/25 bg-primary/10 px-4 py-3 text-sm text-muted-foreground">
           {common.disclaimers.capability}
         </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           {services.items.map((item) => (
-            <article key={item.id} className="space-y-2 border-t border-border pt-4">
+            <article
+              key={item.id}
+              className="rounded-2xl border border-border bg-card/60 p-5"
+            >
               <h2 className="font-heading text-xl font-semibold">{item.name}</h2>
-              <p className="text-sm text-muted-foreground">{item.description}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
             </article>
           ))}
         </div>
@@ -67,6 +70,7 @@ export default async function ServicesPage({ params }: Props) {
             label={services.secondaryCta}
             place="services"
             size="lg"
+            variant="outline"
           />
         </div>
       </Section>

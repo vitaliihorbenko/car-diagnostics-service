@@ -10,6 +10,7 @@
   --font-sans: var(--font-manrope);
   --font-heading: var(--font-sora);
   --font-mono: var(--font-geist-mono);
+  --font-script: var(--font-caveat);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -48,42 +49,42 @@
   --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-/* Light-first: cool steel neutrals, workshop blue primary, amber signal accent */
+/* Dark navy + mint/teal primary CTAs (mockup-aligned) */
 :root {
-  --background: oklch(0.985 0.004 250);
-  --foreground: oklch(0.22 0.025 250);
-  --card: oklch(0.995 0.002 250);
-  --card-foreground: oklch(0.22 0.025 250);
-  --popover: oklch(0.995 0.002 250);
-  --popover-foreground: oklch(0.22 0.025 250);
-  --primary: oklch(0.38 0.08 250);
-  --primary-foreground: oklch(0.98 0.01 250);
-  --secondary: oklch(0.94 0.01 250);
-  --secondary-foreground: oklch(0.28 0.03 250);
-  --muted: oklch(0.95 0.008 250);
-  --muted-foreground: oklch(0.48 0.02 250);
-  --accent: oklch(0.93 0.015 250);
-  --accent-foreground: oklch(0.28 0.03 250);
-  --signal: oklch(0.72 0.14 75);
-  --signal-foreground: oklch(0.22 0.04 75);
-  --destructive: oklch(0.55 0.2 25);
-  --border: oklch(0.88 0.012 250);
-  --input: oklch(0.88 0.012 250);
-  --ring: oklch(0.55 0.07 250);
-  --chart-1: oklch(0.38 0.08 250);
-  --chart-2: oklch(0.72 0.14 75);
-  --chart-3: oklch(0.55 0.04 250);
-  --chart-4: oklch(0.7 0.03 250);
-  --chart-5: oklch(0.45 0.05 250);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.98 0.004 250);
-  --sidebar-foreground: oklch(0.22 0.025 250);
-  --sidebar-primary: oklch(0.38 0.08 250);
-  --sidebar-primary-foreground: oklch(0.98 0.01 250);
-  --sidebar-accent: oklch(0.94 0.01 250);
-  --sidebar-accent-foreground: oklch(0.28 0.03 250);
-  --sidebar-border: oklch(0.88 0.012 250);
-  --sidebar-ring: oklch(0.55 0.07 250);
+  --background: oklch(0.13 0.02 230);
+  --foreground: oklch(0.97 0.005 180);
+  --card: oklch(0.18 0.02 230);
+  --card-foreground: oklch(0.97 0.005 180);
+  --popover: oklch(0.17 0.02 230);
+  --popover-foreground: oklch(0.97 0.005 180);
+  --primary: oklch(0.8 0.15 170);
+  --primary-foreground: #0b1520;
+  --secondary: oklch(0.23 0.02 230);
+  --secondary-foreground: oklch(0.94 0.005 180);
+  --muted: oklch(0.2 0.02 230);
+  --muted-foreground: oklch(0.72 0.02 220);
+  --accent: oklch(0.25 0.03 230);
+  --accent-foreground: oklch(0.97 0.005 180);
+  --signal: oklch(0.8 0.15 170);
+  --signal-foreground: oklch(0.14 0.03 230);
+  --destructive: oklch(0.65 0.2 25);
+  --border: oklch(0.3 0.02 230);
+  --input: oklch(0.26 0.02 230);
+  --ring: oklch(0.8 0.15 170);
+  --chart-1: oklch(0.8 0.15 170);
+  --chart-2: oklch(0.65 0.05 230);
+  --chart-3: oklch(0.5 0.03 230);
+  --chart-4: oklch(0.4 0.02 230);
+  --chart-5: oklch(0.32 0.02 230);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.16 0.02 230);
+  --sidebar-foreground: oklch(0.97 0.005 180);
+  --sidebar-primary: oklch(0.8 0.15 170);
+  --sidebar-primary-foreground: oklch(0.14 0.03 230);
+  --sidebar-accent: oklch(0.23 0.02 230);
+  --sidebar-accent-foreground: oklch(0.97 0.005 180);
+  --sidebar-border: oklch(0.3 0.02 230);
+  --sidebar-ring: oklch(0.8 0.15 170);
 }
 
 @layer base {
@@ -106,12 +107,14 @@
 }
 
 @layer utilities {
-  .tech-grid {
+  .font-script {
+    font-family: var(--font-script), ui-sans-serif, cursive;
+  }
+  .hero-glow {
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.72 0.08 250 / 0.18), transparent),
-      linear-gradient(oklch(0.88 0.012 250 / 0.45) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(0.88 0.012 250 / 0.45) 1px, transparent 1px);
-    background-size: auto, 48px 48px, 48px 48px;
+      radial-gradient(ellipse 70% 55% at 85% 25%, oklch(0.8 0.15 170 / 0.12), transparent 55%),
+      radial-gradient(ellipse 50% 45% at 10% 90%, oklch(0.35 0.05 230 / 0.45), transparent 60%),
+      linear-gradient(180deg, oklch(0.13 0.02 230 / 0.35), oklch(0.13 0.02 230));
   }
   .animate-fade-up {
     animation: fade-up 0.55s ease-out both;

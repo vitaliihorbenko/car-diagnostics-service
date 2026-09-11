@@ -37,7 +37,7 @@ export default async function ContactPage({ params }: Props) {
         <Heading as="h1">{contact.h1}</Heading>
         <p className="mt-4 max-w-3xl text-muted-foreground">{contact.lead}</p>
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <aside className="rounded-xl border border-border bg-muted/40 p-5">
+          <aside className="rounded-2xl border border-border bg-card p-6">
             <h2 className="font-heading text-xl font-semibold">
               {contact.whatsappCard.title}
             </h2>
@@ -48,7 +48,6 @@ export default async function ContactPage({ params }: Props) {
               <WhatsAppButton
                 label={contact.whatsappCard.button}
                 place="contact-card"
-                className="bg-signal text-signal-foreground hover:bg-signal/90 border-transparent"
                 variant="default"
                 size="lg"
               />

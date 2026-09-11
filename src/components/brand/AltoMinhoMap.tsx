@@ -1,0 +1,55 @@
+import { cn } from "@/lib/utils";
+
+type Props = {
+  className?: string;
+};
+
+export function AltoMinhoMap({ className }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 360 280"
+      fill="none"
+      role="img"
+      aria-label="Alto Minho service area"
+      className={cn("h-full w-full", className)}
+    >
+      <rect width="360" height="280" rx="24" fill="#0f1a24" />
+      <path
+        d="M70 40 C120 25 190 30 240 55 C290 80 320 130 300 175 C280 220 220 250 160 255 C100 260 55 220 45 170 C35 120 40 70 70 40 Z"
+        stroke="#2dd4a8"
+        strokeWidth="1.5"
+        fill="#163042"
+        opacity="0.9"
+      />
+      <g fill="#2dd4a8">
+        <circle cx="120" cy="95" r="5" />
+        <circle cx="175" cy="130" r="5" />
+        <circle cx="145" cy="170" r="5" />
+        <circle cx="210" cy="110" r="5" />
+        <circle cx="230" cy="165" r="5" />
+        <circle cx="165" cy="205" r="5" />
+      </g>
+      <g fill="#d7e6ef" fontFamily="ui-sans-serif, system-ui, sans-serif" fontSize="11">
+        <text x="130" y="92">
+          Caminha
+        </text>
+        <text x="185" y="127">
+          Viana
+        </text>
+        <text x="155" y="167">
+          Âncora
+        </text>
+        <text x="220" y="107">
+          Valença
+        </text>
+        <text x="240" y="162">
+          Cerveira
+        </text>
+        <text x="175" y="202">
+          Ponte de Lima
+        </text>
+      </g>
+    </svg>
+  );
+}

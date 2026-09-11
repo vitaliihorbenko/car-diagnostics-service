@@ -5,7 +5,7 @@ type SectionProps = {
   children: React.ReactNode;
   className?: string;
   id?: string;
-  tone?: "default" | "muted" | "grid";
+  tone?: "default" | "muted" | "hero";
 };
 
 export function Section({
@@ -19,8 +19,8 @@ export function Section({
       id={id}
       className={cn(
         "py-14 md:py-20",
-        tone === "muted" && "bg-muted/60",
-        tone === "grid" && "tech-grid",
+        tone === "muted" && "bg-muted/40",
+        tone === "hero" && "hero-glow overflow-hidden pt-16 md:pt-24",
         className,
       )}
     >

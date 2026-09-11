@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Manrope, Sora, Geist_Mono } from "next/font/google";
+import { Caveat, Manrope, Sora, Geist_Mono } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -33,6 +33,12 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+const caveat = Caveat({
+  subsets: ["latin", "latin-ext", "cyrillic"],
+  variable: "--font-caveat",
+  display: "swap",
+});
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -55,7 +61,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${sora.variable} ${manrope.variable} ${geistMono.variable} h-full`}
+      className={`${sora.variable} ${manrope.variable} ${geistMono.variable} ${caveat.variable} h-full`}
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col">
@@ -71,7 +77,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <AnalyticsProvider />
             <Header locale={locale} common={content.common} />
             <main className="flex-1 pb-24 md:pb-0">{children}</main>
-            <Footer common={content.common} />
+            <Footer locale={locale} common={content.common} />
             <StickyMobileCta
               locale={locale}
               bookLabel={content.common.sticky.book}

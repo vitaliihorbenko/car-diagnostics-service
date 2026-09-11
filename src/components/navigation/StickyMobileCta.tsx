@@ -40,7 +40,7 @@ export function StickyMobileCta({ bookLabel, whatsappLabel }: Props) {
   return (
     <div
       className={cn(
-        "animate-sticky-in fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden",
+        "animate-sticky-in fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur-md md:hidden",
         hidden && "pointer-events-none translate-y-full opacity-0",
       )}
     >
@@ -48,8 +48,8 @@ export function StickyMobileCta({ bookLabel, whatsappLabel }: Props) {
         <WhatsAppButton
           label={whatsappLabel}
           place="sticky"
-          className="w-full bg-signal text-signal-foreground hover:bg-signal/90 border-transparent"
-          variant="default"
+          className="w-full"
+          variant="outline"
         />
         <Link href="/contact" className={cn(buttonVariants(), "w-full")}>
           {bookLabel}

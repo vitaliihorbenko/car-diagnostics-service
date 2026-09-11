@@ -47,7 +47,7 @@ export default async function ServiceAreaPage({ params }: Props) {
           {serviceArea.towns.map((town) => (
             <li
               key={town}
-              className="rounded-md border border-border bg-muted/50 px-3 py-1.5 text-sm"
+              className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm"
             >
               {town}
             </li>
@@ -62,6 +62,7 @@ export default async function ServiceAreaPage({ params }: Props) {
             label={serviceArea.secondaryCta}
             place="service-area"
             size="lg"
+            variant="outline"
           />
         </div>
       </Section>

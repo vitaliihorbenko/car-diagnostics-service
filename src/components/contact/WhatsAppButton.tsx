@@ -30,7 +30,12 @@ export function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(buttonVariants({ variant, size }), className)}
+      className={cn(
+        buttonVariants({ variant, size }),
+        variant === "outline" &&
+          "border-primary/45 bg-transparent text-primary hover:bg-primary/10 hover:text-primary",
+        className,
+      )}
       onClick={() => trackWhatsAppClick(place)}
     >
       {label}

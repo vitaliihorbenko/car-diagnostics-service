@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Diagnóstico Alto Minho</title>
+  <circle cx="32" cy="32" r="29" stroke="#2dd4a8" stroke-width="1.75" opacity="0.7"/>
+  <circle cx="32" cy="32" r="23.5" stroke="#2dd4a8" stroke-width="1" opacity="0.25"/>
+  <path
+    d="M14 34 H22 L26.5 18 L33 46 L38.5 26 L43 34 H50"
+    stroke="#2dd4a8"
+    stroke-width="2.75"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="32" cy="32" r="2.25" fill="#2dd4a8"/>
+</svg>

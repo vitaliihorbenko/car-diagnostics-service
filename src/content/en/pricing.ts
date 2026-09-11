@@ -10,6 +10,7 @@ export const pricing = {
   intro:
     "Guide amounts to help you plan. We always confirm the final price when booking.",
   note: "For longer travel or more complex cases, the amount may be adjusted before confirmation.",
+  popularLabel: "Most popular",
   tiers: {
     basic: {
       name: "Basic diagnostics",
